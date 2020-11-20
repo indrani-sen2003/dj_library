@@ -1,0 +1,55 @@
+
+<html>
+
+<head>
+  <title>Our Library</title>
+</head>
+
+<body>
+
+  <h1>Welcome to Our Library</h1>
+  <h2>Our Authors:</h2>
+
+  <table bgcolor="yellow" text="blue" border="2" cellspacing="10" cellpadding="10">
+    <tr>
+        <th>Author Name</th>
+        <th>Date_of_birth</th>
+        <th>Date_of_death</th>
+        
+    </tr>
+    {% for item in query_results_author %}
+    <tr> 
+        <td>{{ item.auth_name }}</td>
+        <td>{{ item.dob }}</td>
+        <td>{{ item.dod }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Our Books:</h2>
+
+<table bgcolor="yellow" text="blue" border="2" cellspacing="10" cellpadding="10">
+    <tr>
+        <th>Book title</th>
+        <th>Author</th>
+        <th>Summary</th>
+        <th>ISBN</th>
+        <th>Genre</th>
+        <th>Language</th>
+        
+    </tr>
+    {% for item in query_results_book %}
+    <tr> 
+        <td>{{ item.title }}</td>
+        <td>{{ item.author }}</td>
+        <td>{{ item.summary }}</td>
+        <td>{{ item.isbn }}</td>
+        <td>{{ item.genre }}</td>
+        <td>{{ item.language }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
