@@ -4,6 +4,7 @@ class Author(models.Model):
 	auth_name=models.CharField(max_length=50)
 	dob=models.DateField()
 	dod=models.DateField()
+        no_of_books=models.IntegerField()
 	def __str__(self):
 		return self.auth_name
 
